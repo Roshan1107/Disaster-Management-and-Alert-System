@@ -1,0 +1,83 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< io.reflectoring.demo:demo >----------------------
+[INFO] Building demo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.2:run (default-cli) > test-compile @ demo >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ demo ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ demo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ demo ---
+[INFO] skip non existing resourceDirectory C:\Users\HP\Documents\Disaster management and alert system\backend\demo\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ demo ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] <<< spring-boot:3.2.2:run (default-cli) < test-compile @ demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.2:run (default-cli) @ demo ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.2)
+
+2026-02-18T18:13:22.948+05:30  INFO 6116 --- [demo] [           main] io.reflectoring.demo.Application         : Starting Application using Java 21.0.6 with PID 6116 (C:\Users\HP\Documents\Disaster management and alert system\backend\demo\target\classes started by HP in C:\Users\HP\Documents\Disaster management and alert system\backend\demo)
+2026-02-18T18:13:22.964+05:30  INFO 6116 --- [demo] [           main] io.reflectoring.demo.Application         : No active profile set, falling back to 1 default profile: "default"
+2026-02-18T18:13:27.181+05:30  INFO 6116 --- [demo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-18T18:13:27.190+05:30  INFO 6116 --- [demo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-18T18:13:28.179+05:30  INFO 6116 --- [demo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 940 ms. Found 5 JPA repository interfaces.
+2026-02-18T18:13:28.307+05:30  INFO 6116 --- [demo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-02-18T18:13:28.312+05:30  INFO 6116 --- [demo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-02-18T18:13:28.393+05:30  INFO 6116 --- [demo] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface io.reflectoring.demo.repository.AuditLogRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-18T18:13:28.396+05:30  INFO 6116 --- [demo] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface io.reflectoring.demo.repository.DisasterEventRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-18T18:13:28.398+05:30  INFO 6116 --- [demo] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface io.reflectoring.demo.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-18T18:13:28.401+05:30  INFO 6116 --- [demo] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface io.reflectoring.demo.repository.RescueTaskRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-18T18:13:28.402+05:30  INFO 6116 --- [demo] [           main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface io.reflectoring.demo.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-02-18T18:13:28.403+05:30  INFO 6116 --- [demo] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+2026-02-18T18:13:33.041+05:30  INFO 6116 --- [demo] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-02-18T18:13:33.084+05:30  INFO 6116 --- [demo] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-18T18:13:33.085+05:30  INFO 6116 --- [demo] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2026-02-18T18:13:33.378+05:30  INFO 6116 --- [demo] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-02-18T18:13:33.382+05:30  INFO 6116 --- [demo] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10125 ms
+2026-02-18T18:13:34.176+05:30  INFO 6116 --- [demo] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-02-18T18:13:34.461+05:30  INFO 6116 --- [demo] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2026-02-18T18:13:34.660+05:30  INFO 6116 --- [demo] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-02-18T18:13:35.876+05:30  INFO 6116 --- [demo] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-18T18:13:36.020+05:30  INFO 6116 --- [demo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-02-18T18:13:37.641+05:30  INFO 6116 --- [demo] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-02-18T18:13:37.648+05:30  INFO 6116 --- [demo] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-02-18T18:13:37.749+05:30  WARN 6116 --- [demo] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-02-18T18:13:43.585+05:30  INFO 6116 --- [demo] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: create table audit_logs (id bigint generated by default as identity, action varchar(255) not null, details TEXT, email varchar(255) not null, ip_address varchar(255), status varchar(255) not null check (status in ('SUCCESS','FAILURE')), timestamp timestamp(6) not null, primary key (id))
+Hibernate: create table disaster_events (id bigint generated by default as identity, created_at timestamp(6) not null, description TEXT not null, disaster_type varchar(255) not null check (disaster_type in ('FLOOD','CYCLONE','EARTHQUAKE','WILDFIRE','LANDSLIDE','TSUNAMI','DROUGHT','HEATWAVE','STORM','TORNADO','VOLCANIC_ERUPTION','OTHER')), event_time timestamp(6), external_id varchar(255), latitude float(53), location_name varchar(255), longitude float(53), metadata varchar(4000), region varchar(255), rejection_reason varchar(255), severity varchar(255) not null check (severity in ('LOW','MEDIUM','HIGH','CRITICAL')), source varchar(255), status varchar(255) not null check (status in ('PENDING','VERIFIED','REJECTED','ACTIVE','RESOLVED')), title varchar(255) not null, updated_at timestamp(6), verified_at timestamp(6), verified_by_user_id bigint, primary key (id))
+Hibernate: create table profiles (id bigint generated by default as identity, address varchar(255), blood_group varchar(255), emergency_contact varchar(255), name varchar(255), phone_number varchar(255), region varchar(255), user_id bigint, primary key (id))
+Hibernate: create table rescue_tasks (id bigint generated by default as identity, created_at timestamp(6) not null, description varchar(255) not null, status varchar(255) not null check (status in ('PENDING','IN_PROGRESS','COMPLETED','CANCELLED')), updated_at timestamp(6), responder_id bigint, primary key (id))
+Hibernate: create table users (id bigint generated by default as identity, email varchar(255) not null, password varchar(255) not null, role varchar(255) not null check (role in ('ADMIN','RESPONDER','CITIZEN')), primary key (id))
+Hibernate: alter table if exists profiles drop constraint if exists UK_4ixsj6aqve5pxrbw2u0oyk8bb
+Hibernate: alter table if exists profiles add constraint UK_4ixsj6aqve5pxrbw2u0oyk8bb unique (user_id)
+Hibernate: alter table if exists users drop constraint if exists UK_6dotkott2kjsp8vw4d0m25fb7
+Hibernate: alter table if exists users add constraint UK_6dotkott2kjsp8vw4d0m25fb7 unique (email)
+Hibernate: alter table if exists disaster_events add constraint FKd2r8y61mwfwnak4l4b7j7aj1x foreign key (verified_by_user_id) references users
+Hibernate: alter table if exists profiles add constraint FK410q61iev7klncmpqfuo85ivh foreign key (user_id) references users
+Hibernate: alter table if exists rescue_tasks add constraint FKltlfld2do2cadfuflwtt2xgp0 foreign key (responder_id) references users
+2026-02-18T18:13:43.918+05:30  INFO 6116 --- [demo] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-18T18:13:49.198+05:30  WARN 6116 --- [demo] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-18T18:13:50.333+05:30  INFO 6116 --- [demo] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3204146d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3299e315, org.springframework.security.web.context.SecurityContextHolderFilter@3a4d0ca2, org.springframework.security.web.header.HeaderWriterFilter@418f0f27, org.springframework.web.filter.CorsFilter@7320bccc, org.springframework.security.web.authentication.logout.LogoutFilter@5e8f0c54, io.reflectoring.demo.security.JwtAuthenticationFilter@74ed7111, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b8a11d7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1391d95f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@403ba39f, org.springframework.security.web.session.SessionManagementFilter@4bacabc4, org.springframework.security.web.access.ExceptionTranslationFilter@fd8513b, org.springframework.security.web.access.intercept.AuthorizationFilter@4ab1693b]
+2026-02-18T18:13:52.784+05:30  INFO 6116 --- [demo] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-02-18T18:13:52.789+05:30  INFO 6116 --- [demo] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Starting...
+2026-02-18T18:13:52.798+05:30  INFO 6116 --- [demo] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@57af157c]]
+2026-02-18T18:13:52.798+05:30  INFO 6116 --- [demo] [           main] o.s.m.s.b.SimpleBrokerMessageHandler     : Started.
+2026-02-18T18:13:52.816+05:30  INFO 6116 --- [demo] [           main] io.reflectoring.demo.Application         : Started Application in 31.976 seconds (process running for 34.451)

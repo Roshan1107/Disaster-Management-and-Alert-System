@@ -1,0 +1,127 @@
+<div class="monitoring-container">
+  <!-- Live Toast Notification -->
+  <div *ngIf="liveToast" class="live-toast">
+    {{ liveToast }}
+  </div>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="header-content">
+      <h1>Disaster Monitoring</h1>
+      <div class="header-badges">
+        <span *ngIf="wsConnected" class="live-badge">🔴 LIVE</span>
+        <span *ngIf="!wsConnected" class="polling-badge">🔄 Polling</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" placeholder="Search by location or region" [(ngModel)]="selectedRegion"
+        (change)="onFilterChange()" class="search-input">
+    </div>
+  </div>
+
+  <!-- Filters -->
+  <div class="filters-container">
+    <div class="filter-pills">
+      <div class="custom-select-wrapper">
+        <select [(ngModel)]="selectedType" (change)="onFilterChange()" class="filter-pill">
+          <option value="" disabled selected hidden>Type</option>
+          <option value="">All Types</option>
+          <option *ngFor="let type of disasterTypes" [value]="type">{{ type }}</option>
+        </select>
+        <span class="dropdown-arrow">﹀</span>
+      </div>
+
+      <div class="custom-select-wrapper">
+        <select [(ngModel)]="selectedSeverity" (change)="onFilterChange()" class="filter-pill">
+          <option value="" disabled selected hidden>Severity</option>
+          <option value="">All Severities</option>
+          <option *ngFor="let severity of severityLevels" [value]="severity">{{ severity }}</option>
+        </select>
+        <span class="dropdown-arrow">﹀</span>
+      </div>
+
+      <button *ngIf="selectedType || selectedSeverity || selectedRegion" (click)="clearFilters()"
+        class="filter-pill clear-btn">✕ Clear</button>
+    </div>
+  </div>
+
+  <!-- Map Section -->
+  <div class="map-section">
+    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" [src]="mapUrl"
+      style="border-radius: 12px;">
+    </iframe>
+  </div>
+
+
+  <!-- Live Alerts Section -->
+  <div class="live-alerts-section">
+    <div class="section-header">
+      <h2>Live Alerts</h2>
+      <span class="alert-count" *ngIf="filteredAlerts.length > 0">{{ filteredAlerts.length }}</span>
+    </div>
+
+    <!-- Loading State -->
+    <div *ngIf="loading" class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading alerts...</p>
+    </div>
+
+    <!-- Error State -->
+    <div *ngIf="error" class="error-state">
+      <p>{{ error }}</p>
+      <button (click)="loadAlerts()" class="btn-retry">Retry</button>
+    </div>
+
+    <!-- Alerts List -->
+    <div *ngIf="!loading" class="alerts-list">
+      <div *ngFor="let alert of filteredAlerts" class="alert-card" [ngClass]="getSeverityBorderClass(alert.severity)">
+        <div class="alert-icon-container">
+          <span class="alert-icon">{{ getDisasterIcon(alert.disasterType) }}</span>
+        </div>
+        <div class="alert-content">
+          <h3 class="alert-title">{{ alert.title || alert.disasterType + ' Alert' }}</h3>
+          <div class="alert-meta">
+            <span class="alert-severity" [ngClass]="getSeverityClass(alert.severity)">
+              {{ alert.severity | titlecase }}
+            </span>
+            <span class="alert-source" *ngIf="alert.source">{{ alert.source }}</span>
+          </div>
+          <p class="alert-location" *ngIf="alert.locationName || alert.region">
+            📍 {{ alert.locationName || alert.region }}
+          </p>
+          <p class="alert-time" *ngIf="alert.eventTime">
+            🕐 {{ formatDate(alert.eventTime) }}
+          </p>
+        </div>
+      </div>
+      <div *ngIf="filteredAlerts.length === 0 && !loading && !error" class="no-alerts">
+        <p>No active alerts in this area.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a routerLink="/dashboard" class="nav-item">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label">Dashboard</span>
+    </a>
+    <a routerLink="/disaster-monitoring" class="nav-item active">
+      <span class="nav-icon">🔔</span>
+      <span class="nav-label">Alerts</span>
+    </a>
+    <a routerLink="/reports" class="nav-item">
+      <span class="nav-icon">📊</span>
+      <span class="nav-label">Reports</span>
+    </a>
+    <a routerLink="/profile" class="nav-item">
+      <span class="nav-icon">👤</span>
+      <span class="nav-label">Profile</span>
+    </a>
+  </nav>
+</div>

@@ -1,0 +1,22 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< io.reflectoring.demo:demo >----------------------
+[INFO] Building demo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ demo ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ demo ---
+[INFO] Changes detected - recompiling the module! :input tree
+[INFO] Compiling 41 source files with javac [debug release 21] to target\classes
+[INFO] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/UsgsEarthquakeClient.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/UsgsEarthquakeClient.java: Recompile with -Xlint:unchecked for details.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  27.315 s
+[INFO] Finished at: 2026-02-18T18:12:15+05:30
+[INFO] ------------------------------------------------------------------------

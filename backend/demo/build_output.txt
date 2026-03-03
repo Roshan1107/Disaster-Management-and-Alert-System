@@ -1,0 +1,85 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< io.reflectoring.demo:demo >----------------------
+[INFO] Building demo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ demo ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ demo ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 42 source files with javac [debug release 21] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/OpenWeatherMapClient.java:[11,56] package org.springframework.web.reactive.function.client does not exist
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/OpenWeatherMapClient.java:[22,19] cannot find symbol
+  symbol:   class WebClient
+  location: class io.reflectoring.demo.client.OpenWeatherMapClient
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/OpenWeatherMapClient.java:[19,1] cannot find symbol
+  symbol:   class WebClient
+  location: class io.reflectoring.demo.client.OpenWeatherMapClient
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/UsgsEarthquakeClient.java:[11,56] package org.springframework.web.reactive.function.client does not exist
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/NasaEonetClient.java:[11,56] package org.springframework.web.reactive.function.client does not exist
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/NasaEonetClient.java:[23,19] cannot find symbol
+  symbol:   class WebClient
+  location: class io.reflectoring.demo.client.NasaEonetClient
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/NasaEonetClient.java:[20,1] cannot find symbol
+  symbol:   class WebClient
+  location: class io.reflectoring.demo.client.NasaEonetClient
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/UsgsEarthquakeClient.java:[24,19] cannot find symbol
+  symbol:   class WebClient
+  location: class io.reflectoring.demo.client.UsgsEarthquakeClient
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/UsgsEarthquakeClient.java:[21,1] cannot find symbol
+  symbol:   class WebClient
+  location: class io.reflectoring.demo.client.UsgsEarthquakeClient
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/config/WebClientConfig.java:[5,56] package org.springframework.web.reactive.function.client does not exist
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/config/WebClientConfig.java:[11,41] package WebClient does not exist
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/config/WebClientConfig.java:[11,12] cannot find symbol
+  symbol:   class WebClient
+  location: class io.reflectoring.demo.config.WebClientConfig
+[INFO] 12 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  40.883 s
+[INFO] Finished at: 2026-02-18T18:04:45+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.11.0:compile (default-compile) on project demo: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/OpenWeatherMapClient.java:[11,56] package org.springframework.web.reactive.function.client does not exist
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/OpenWeatherMapClient.java:[22,19] cannot find symbol
+[ERROR]   symbol:   class WebClient
+[ERROR]   location: class io.reflectoring.demo.client.OpenWeatherMapClient
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/OpenWeatherMapClient.java:[19,1] cannot find symbol
+[ERROR]   symbol:   class WebClient
+[ERROR]   location: class io.reflectoring.demo.client.OpenWeatherMapClient
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/UsgsEarthquakeClient.java:[11,56] package org.springframework.web.reactive.function.client does not exist
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/NasaEonetClient.java:[11,56] package org.springframework.web.reactive.function.client does not exist
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/NasaEonetClient.java:[23,19] cannot find symbol
+[ERROR]   symbol:   class WebClient
+[ERROR]   location: class io.reflectoring.demo.client.NasaEonetClient
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/NasaEonetClient.java:[20,1] cannot find symbol
+[ERROR]   symbol:   class WebClient
+[ERROR]   location: class io.reflectoring.demo.client.NasaEonetClient
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/UsgsEarthquakeClient.java:[24,19] cannot find symbol
+[ERROR]   symbol:   class WebClient
+[ERROR]   location: class io.reflectoring.demo.client.UsgsEarthquakeClient
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/client/UsgsEarthquakeClient.java:[21,1] cannot find symbol
+[ERROR]   symbol:   class WebClient
+[ERROR]   location: class io.reflectoring.demo.client.UsgsEarthquakeClient
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/config/WebClientConfig.java:[5,56] package org.springframework.web.reactive.function.client does not exist
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/config/WebClientConfig.java:[11,41] package WebClient does not exist
+[ERROR] /C:/Users/HP/Documents/Disaster management and alert system/backend/demo/src/main/java/io/reflectoring/demo/config/WebClientConfig.java:[11,12] cannot find symbol
+[ERROR]   symbol:   class WebClient
+[ERROR]   location: class io.reflectoring.demo.config.WebClientConfig
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

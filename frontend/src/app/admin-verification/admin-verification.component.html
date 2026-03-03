@@ -1,0 +1,95 @@
+<div class="admin-verification-container">
+    <div class="header">
+        <h1>🔐 Admin Verification Panel</h1>
+        <p class="subtitle">Review and verify pending disaster alerts before they reach responders</p>
+    </div>
+
+    <!-- Success Message -->
+    <div *ngIf="successMessage" class="alert alert-success">
+        {{ successMessage }}
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="error" class="alert alert-error">
+        {{ error }}
+    </div>
+
+    <!-- Loading State -->
+    <div *ngIf="loading" class="loading-state">
+        <div class="spinner"></div>
+        <p>Loading pending alerts...</p>
+    </div>
+
+    <!-- Pending Alerts Table -->
+    <div *ngIf="!loading" class="alerts-table-container">
+        <div *ngIf="pendingAlerts.length === 0" class="no-alerts">
+            <p>✅ No pending alerts to review. All caught up!</p>
+        </div>
+
+        <table *ngIf="pendingAlerts.length > 0" class="alerts-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Severity</th>
+                    <th>Location</th>
+                    <th>Source</th>
+                    <th>Event Time</th>
+                    <th>⏱ Time Left</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let alert of pendingAlerts" [class.row-urgent]="isUrgent(alert)"
+                    [class.row-expired]="isExpired(alert)">
+                    <td>{{ alert.id }}</td>
+                    <td class="title-cell" [title]="alert.description">{{ alert.title }}</td>
+                    <td>{{ alert.disasterType }}</td>
+                    <td>
+                        <span [class]="'severity-badge ' + getSeverityClass(alert.severity)">
+                            {{ alert.severity }}
+                        </span>
+                    </td>
+                    <td>{{ alert.locationName || alert.region || '—' }}</td>
+                    <td>{{ alert.source || 'External API' }}</td>
+                    <td>{{ formatDate(alert.eventTime || alert.createdAt) }}</td>
+                    <td>
+                        <span class="countdown" [class.countdown-urgent]="isUrgent(alert)"
+                            [class.countdown-expired]="isExpired(alert)">
+                            {{ getCountdownText(alert) }}
+                        </span>
+                        <span *ngIf="isUrgent(alert)" class="escalation-warning">⚠️ Auto-escalating soon!</span>
+                        <span *ngIf="isExpired(alert)" class="escalation-warning expired-warning">🔄 Sending to
+                            responder...</span>
+                    </td>
+                    <td class="actions-cell">
+                        <button (click)="approveAlert(alert.id)" class="btn btn-verify"
+                            title="Approve & send to responders" [disabled]="isExpired(alert)">
+                            ✓ Approve
+                        </button>
+                        <button (click)="openRejectModal(alert.id)" class="btn btn-reject" title="Reject"
+                            [disabled]="isExpired(alert)">
+                            ✗ Reject
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Reject Modal -->
+    <div *ngIf="showRejectModal" class="modal-overlay" (click)="closeRejectModal()">
+        <div class="modal-box" (click)="$event.stopPropagation()">
+            <h3>Reject Alert</h3>
+            <p>Provide a reason for rejection (optional):</p>
+            <textarea [(ngModel)]="rejectReason" rows="3" placeholder="e.g. Duplicate event, insufficient data..."
+                class="reject-textarea">
+            </textarea>
+            <div class="modal-actions">
+                <button (click)="closeRejectModal()" class="btn btn-cancel">Cancel</button>
+                <button (click)="submitReject()" class="btn btn-reject">Confirm Reject</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+{
+  "fullName": "Test User",
+  "email": "test_curl_user@example.com",
+  "phoneNumber": "1234567890",
+  "region": "Test City",
+  "password": "password123",
+  "role": "RESPONDER"
+}
